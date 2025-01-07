@@ -6,7 +6,7 @@
     <!-- <a href="https://nuxt-pwa-2-woad.vercel.app/" target="_blank" rel="noopener noreferrer" class="aTag">
   Leader PWA A link
 </a> -->
-<a href="web+pwa2://navigate" target="_blank" rel="noopener noreferrer" class="aTag">
+<a href="web+nuxtpwa://navigate" target="_blank" rel="noopener noreferrer" class="aTag">
   A Tag PWA 2 Navigate
 </a>
   
@@ -19,7 +19,7 @@
 // }
 function handlePWANavigate() {
     console.log('PWA Navigate');
-    const protocolHandler = "web+pwa2://navigate";
+    const protocolHandler = "web+nuxtpwa://navigate";
   const fallbackURL = "https://nuxt-pwa-2-woad.vercel.app/";
 
   // Attempt to navigate using the protocol
@@ -29,7 +29,7 @@ function handlePWANavigate() {
   setTimeout(() => {
     console.log('pwa Navigate timeout');
     window.location.href = fallbackURL;
-  }, 1000);
+  }, 10 * 60000);
 }
 </script>
 
