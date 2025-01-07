@@ -36,8 +36,8 @@ export default defineNuxtConfig({
       ],
       related_applications: [
         {
-          platform: 'leader',
-          url: 'https://dev.leaderexpenses-intrepidtravel-com.intrepidtravel.cloud/manifest.json',
+          platform: 'pwa2',
+          url: 'https://nuxt-pwa-2-woad.vercel.app/manifest.json',
         },
       ],
     },
