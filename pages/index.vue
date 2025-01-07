@@ -3,7 +3,7 @@
     <h1>Welcome to Nuxt PWA App</h1>
     <p>This is a simple PWA using Nuxt 3 and the PWA module.</p>
     <button @click="handlePWANavigate" class="button">Go to Leader PWA</button>
-    <a href="https://dev.leaderexpenses-intrepidtravel-com.intrepidtravel.cloud" target="_blank" rel="noopener noreferrer" class="aTag">
+    <a href="https://nuxt-pwa-2-woad.vercel.app/" target="_blank" rel="noopener noreferrer" class="aTag">
   Leader PWA A link
 </a>
   
@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 function handlePWANavigate() {
-  window.location.href = 'https://dev.leaderexpenses-intrepidtravel-com.intrepidtravel.cloud';
+  window.location.href = 'https://nuxt-pwa-2-woad.vercel.app/';
 }
 </script>
 
