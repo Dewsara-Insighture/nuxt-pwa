@@ -44,7 +44,7 @@ export default defineNuxtConfig({
       
       related_applications: [
         {
-          platform: 'pwa2',
+          platform: 'nuxtpwa',
           url: 'https://nuxt-pwa-2-woad.vercel.app/manifest.json',
         },
       ],
