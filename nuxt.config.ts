@@ -37,10 +37,11 @@ export default defineNuxtConfig({
       // This is to check Open PWA separatly
       protocol_handlers: [
         {
-          protocol: "pwa2",
+          protocol: "grootpwa",
           url: "/?action=%s", // The URL pattern to handle this protocol
         },
       ],
+      
       related_applications: [
         {
           platform: 'pwa2',
