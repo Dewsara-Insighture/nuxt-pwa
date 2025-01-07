@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <h1>Welcome to Nuxt PWA App</h1>
-    <p>This is a simple PWA using Nuxt 3 and the PWA module.</p>
-    <button @click="handlePWANavigate" class="button">Go to Leader PWA</button>
+    <h1>Welcome to Groot PWA App</h1>
+    <p>This is a Groot PWA App</p>
+    <button @click="handlePWANavigate" class="button">Go to PWA 2</button>
     <a href="https://nuxt-pwa-2-woad.vercel.app/" target="_blank" rel="noopener noreferrer" class="aTag">
   Leader PWA A link
 </a>
@@ -16,7 +16,7 @@
 // }
 function handlePWANavigate() {
     console.log('PWA Navigate');
-    const protocolHandler = "pwa2://navigate";
+    const protocolHandler = "web+pwa2://navigate";
   const fallbackURL = "https://nuxt-pwa-2-woad.vercel.app/";
 
   // Attempt to navigate using the protocol
