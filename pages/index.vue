@@ -3,8 +3,11 @@
     <h1>Welcome to Groot PWA App</h1>
     <p>This is a Groot PWA App</p>
     <button @click="handlePWANavigate" class="button">Go to PWA 2</button>
-    <a href="https://nuxt-pwa-2-woad.vercel.app/" target="_blank" rel="noopener noreferrer" class="aTag">
+    <!-- <a href="https://nuxt-pwa-2-woad.vercel.app/" target="_blank" rel="noopener noreferrer" class="aTag">
   Leader PWA A link
+</a> -->
+<a href="web+pwa2://navigate" target="_blank" rel="noopener noreferrer" class="aTag">
+  A Tag PWA 2 Navigate
 </a>
   
   </div>
