@@ -11,8 +11,22 @@
 </template>
 
 <script setup lang="ts">
+// function handlePWANavigate() {
+//   window.location.href = 'https://nuxt-pwa-2-woad.vercel.app/';
+// }
 function handlePWANavigate() {
-  window.location.href = 'https://nuxt-pwa-2-woad.vercel.app/';
+    console.log('PWA Navigate');
+    const protocolHandler = "pwa2://navigate";
+  const fallbackURL = "https://nuxt-pwa-2-woad.vercel.app/";
+
+  // Attempt to navigate using the protocol
+  window.location.href = protocolHandler;
+
+  // Set a fallback in case protocol navigation fails
+  setTimeout(() => {
+    console.log('pwa Navigate timeout');
+    window.location.href = fallbackURL;
+  }, 1000);
 }
 </script>
 
