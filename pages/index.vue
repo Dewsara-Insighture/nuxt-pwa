@@ -6,6 +6,9 @@
     <!-- <a href="https://nuxt-pwa-2-woad.vercel.app/" target="_blank" rel="noopener noreferrer" class="aTag">
   Leader PWA A link
 </a> -->
+
+
+<!-- If there is a target set to _blank, it will open in the browser, if not within the same PWA app -->
 <a href="https://nuxt-pwa-2-woad.vercel.app/" rel="noopener noreferrer" class="aTag">
   A Tag PWA 2 Navigate
 </a>
@@ -15,7 +18,7 @@
 
 <script setup lang="ts">
 function handlePWANavigate() {
-  console.log('window href hit')
+  console.log('window href hit from groot')
   window.location.href = 'https://nuxt-pwa-2-woad.vercel.app/';
   // window.open('https://nuxt-pwa-2-woad.vercel.app/');
 }
