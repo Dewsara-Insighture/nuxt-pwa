@@ -15,6 +15,7 @@
 
 <script setup lang="ts">
 function handlePWANavigate() {
+  console.log('window href hit')
   window.location.href = 'https://nuxt-pwa-2-woad.vercel.app/';
   // window.open('https://nuxt-pwa-2-woad.vercel.app/');
 }
