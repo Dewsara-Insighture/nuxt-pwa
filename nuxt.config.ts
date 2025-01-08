@@ -42,12 +42,12 @@ export default defineNuxtConfig({
       //   },
       // ],
       
-      related_applications: [
-        {
-          platform: 'webapp', // The platform on which the application can be found
-          url: 'https://nuxt-pwa-2-woad.vercel.app/manifest.json',
-        },
-      ],
+      // related_applications: [
+      //   {
+      //     platform: 'webapp', // The platform on which the application can be found
+      //     url: 'https://nuxt-pwa-2-woad.vercel.app/manifest.json',
+      //   },
+      // ],
     },
     workbox: {
       navigateFallback: '/',
