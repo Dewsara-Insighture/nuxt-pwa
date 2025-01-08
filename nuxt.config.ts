@@ -6,6 +6,7 @@ export default defineNuxtConfig({
    // PWA module configuration
    pwa: {
     registerType: 'autoUpdate',
+    
     manifest: {
       name: 'Nuxt PWA App',
       short_name: 'NuxtPWA',
@@ -34,7 +35,8 @@ export default defineNuxtConfig({
           purpose: 'maskable',
         },
       ],
-      // // This is to check Open PWA separatly
+      
+       // This is to check Open PWA separatly
       // protocol_handlers: [
       //   {
       //     protocol: "web+grootpwa",
@@ -48,6 +50,7 @@ export default defineNuxtConfig({
       //     url: 'https://nuxt-pwa-2-woad.vercel.app/manifest.json',
       //   },
       // ],
+      
     },
     workbox: {
       navigateFallback: '/',
