@@ -6,7 +6,7 @@
     <!-- <a href="https://nuxt-pwa-2-woad.vercel.app/" target="_blank" rel="noopener noreferrer" class="aTag">
   Leader PWA A link
 </a> -->
-<a href="web+nuxtpwa://navigate" target="_blank" rel="noopener noreferrer" class="aTag">
+<a href="https://nuxt-pwa-2-woad.vercel.app/" rel="noopener noreferrer" class="aTag">
   A Tag PWA 2 Navigate
 </a>
   
