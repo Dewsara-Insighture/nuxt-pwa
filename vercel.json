@@ -5,7 +5,5 @@
         "destination": "https://nuxt-pwa-woad.vercel.app/$1"
       }
 
-    ],
-    "cleanUrls": true,
-    "trailingSlash": false
+    ]
   }
