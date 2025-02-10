@@ -3,10 +3,23 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   modules: ['@vite-pwa/nuxt'],
-   // PWA module configuration
-   pwa: {
+  
+  app: {
+    baseURL: '/',
+    buildAssetsDir: '/_app1/', // Unique assets directory
+  },
+
+  // Configure router base
+  router: {
+    options: {
+      strict: true,
+    },
+  },
+  
+  // PWA module configuration
+  pwa: {
     registerType: 'autoUpdate',
-    
+
     manifest: {
       name: 'Nuxt PWA App',
       short_name: 'NuxtPWA',
@@ -15,7 +28,7 @@ export default defineNuxtConfig({
       background_color: '#ffffff',
       display: 'standalone',
       start_url: '/',
-       icons: [
+      icons: [
         { src: '/pwa-assets/pwa-64x64.png', sizes: '64x64', type: 'image/png' },
         {
           src: '/pwa-assets/pwa-192x192.png',
@@ -41,7 +54,6 @@ export default defineNuxtConfig({
       //     url: 'https://nuxt-pwa-2-woad.vercel.app/manifest.json',
       //   },
       // ],
-      
     },
     workbox: {
       navigateFallback: '/',
@@ -50,7 +62,8 @@ export default defineNuxtConfig({
     devOptions: {
       enabled: true,
       suppressWarnings: true,
-      type: 'module'
-    }
+      type: 'module',
+    },
   },
-})
+
+});
