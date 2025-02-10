@@ -25,14 +25,12 @@ export default defineNuxtConfig({
       strict: true
     }
   },
-
   // Add vite configuration
   vite: {
     build: {
       assetsDir: '_nuxt'
     }
   },
-
   // PWA module configuration
   pwa: {
     registerType: 'autoUpdate',
