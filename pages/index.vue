@@ -1,31 +1,67 @@
 <template>
   <div class="container">
-    <h1>Welcome to Groot PWA App</h1>
-    <p>This is a Groot PWA App</p>
-    <button @click="handlePWANavigate" class="button">Go to PWA 2</button>
-    <!-- <a href="https://nuxt-pwa-2-woad.vercel.app/" target="_blank" rel="noopener noreferrer" class="aTag">
-  Leader PWA A link
-</a> -->
+    <h1>Welcome to Parent App</h1>
 
-
-<!-- If there is a target set to _blank, it will open in the browser, if not within the same PWA app -->
-<a href="https://nuxt-pwa-2-woad.vercel.app/" rel="noopener noreferrer" class="aTag">
-  A Tag PWA 2 Navigate
-</a>
-  
+    <div v-if="items.length === 0" class="no-items">
+      <p class="no-items-text">No items found. Try adding some!</p>
+    </div>
+    <ul v-else class="item-list">
+    <li v-for="item in items" :key="item.id" class="item">
+      {{ item.name }}
+    </li>
+  </ul>
   </div>
 </template>
 
 <script setup lang="ts">
-function handlePWANavigate() {
-  console.log('window href hit from groot')
-  window.location.href = 'https://nuxt-pwa-2-woad.vercel.app/';
-  // window.open('https://nuxt-pwa-2-woad.vercel.app/');
-}
+import { ref, onMounted } from 'vue';
+import { useIndexedDB } from '@/composable/useIndexedDB';
 
+const { getItems } = useIndexedDB();
+
+const items = ref<{ id: number; name: string }[]>([]);
+
+const loadItems = async () => {
+  items.value = (await getItems()) || [];
+};
+
+onMounted(loadItems);
 </script>
 
 <style scoped>
+.no-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0; /* Adds vertical spacing */
+}
+
+.no-items-text {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 500; /* font-medium */
+  color: #6b7280; /* Tailwind's gray-500 */
+  text-align: center;
+}
+
+.item-list {
+  margin-top: 1rem; 
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #f9fafb; 
+}
+
+.item {
+  padding: 0.5rem; 
+  border-bottom: 1px solid #e5e7eb; 
+  font-size: 1rem;
+  color: #374151; 
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
 .container {
   text-align: center;
   margin-top: 50px;
@@ -41,11 +77,11 @@ function handlePWANavigate() {
 }
 
 .aTag {
-    margin :0px 10px;
-    background-color: #443a87;
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: white;
-    text-decoration: none;
+  margin: 0px 10px;
+  background-color: #443a87;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
 }
 </style>

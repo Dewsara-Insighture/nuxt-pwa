@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+      {
+        "source": "/user/:path*",
+        "destination": "https://groot-pwa-app-1.vercel.app/:path*"
+      }
+    ]
+  }
