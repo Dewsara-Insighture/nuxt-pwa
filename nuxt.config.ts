@@ -6,9 +6,9 @@ export default defineNuxtConfig({
   app: {
     baseURL: '/',
     buildAssetsDir: '/_nuxt/', // Changed to default Nuxt assets directory
-    cdnURL: process.env.NODE_ENV === 'production' 
-      ? 'https://groot-pwa-app-1.vercel.app' 
-      : ''
+    // cdnURL: process.env.NODE_ENV === 'production' 
+    //   ? 'https://groot-pwa-app-1.vercel.app' 
+    //   : ''
   },
 
   // Add nitro configuration
