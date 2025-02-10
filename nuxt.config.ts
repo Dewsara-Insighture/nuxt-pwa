@@ -12,12 +12,12 @@ export default defineNuxtConfig({
   },
 
   // Add nitro configuration
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-      routes: ['/']
-    }
-  },
+  // nitro: {
+  //   prerender: {
+  //     crawlLinks: true,
+  //     routes: ['/']
+  //   }
+  // },
 
   // Router configuration
   router: {
