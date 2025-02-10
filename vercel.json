@@ -3,10 +3,7 @@
       {
         "source": "/user/(.*)",
         "destination": "https://nuxt-pwa-woad.vercel.app/$1"
-      },
-      {
-        "source": "/(.*)",
-        "destination": "https://groot-pwa-app-1.vercel.app/$1"
       }
+
     ]
   }
