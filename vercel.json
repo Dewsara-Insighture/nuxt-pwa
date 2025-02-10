@@ -2,7 +2,8 @@
     "rewrites": [
       {
         "source": "/user/:path*",
-        "destination": "https://groot-pwa-app-1.vercel.app/:path*"
+        "destination": "https://nuxt-pwa-woad.vercel.app/:path*"
       }
     ]
   }
+  
