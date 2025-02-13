@@ -1,9 +1,8 @@
 {
     "rewrites": [
       {
-        "source": "/user/(.*)",
-        "destination": "https://nuxt-pwa-woad.vercel.app/$1"
+        "source": "/pqrs(.*)",
+        "destination": "https://nuxt-pwa-woad.vercel.app/pqrs$1"
       }
-
     ]
   }

@@ -10,6 +10,7 @@
       {{ item.name }}
     </li>
   </ul>
+  <button @click="handlePWANavigate" class="navigate-button">Go to PWA Child App</button>
   </div>
 </template>
 
@@ -25,21 +26,38 @@ const loadItems = async () => {
   items.value = (await getItems()) || [];
 };
 
+async function handlePWANavigate() {
+  // window.location.href = '#PWA CHILD URL ';
+  await navigateTo('/pqrs')
+}
+
+
 onMounted(loadItems);
 </script>
 
 <style scoped>
+
+.navigate-button {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4dba87;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
 .no-items {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem 0; /* Adds vertical spacing */
+  padding: 1.5rem 0;
 }
 
 .no-items-text {
-  font-size: 1.125rem; /* text-lg */
-  font-weight: 500; /* font-medium */
-  color: #6b7280; /* Tailwind's gray-500 */
+  font-size: 1.125rem; 
+  font-weight: 500; 
+  color: #6b7280; 
   text-align: center;
 }
 

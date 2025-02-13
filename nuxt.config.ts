@@ -3,34 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   modules: ['@vite-pwa/nuxt'],
-  app: {
-    baseURL: '/',
-    buildAssetsDir: '/_nuxt/', // Changed to default Nuxt assets directory
-    // cdnURL: process.env.NODE_ENV === 'production' 
-    //   ? 'https://groot-pwa-app-1.vercel.app' 
-    //   : ''
-  },
 
-  // Add nitro configuration
-  // nitro: {
-  //   prerender: {
-  //     crawlLinks: true,
-  //     routes: ['/']
-  //   }
-  // },
-
-  // Router configuration
-  router: {
-    options: {
-      strict: true
-    }
-  },
-  // Add vite configuration
-  vite: {
-    build: {
-      assetsDir: '_nuxt'
-    }
-  },
   // PWA module configuration
   pwa: {
     registerType: 'autoUpdate',
@@ -63,12 +36,6 @@ export default defineNuxtConfig({
           purpose: 'maskable',
         },
       ],
-      // related_applications: [
-      //   {
-      //     platform: 'webapp', // The platform on which the application can be found
-      //     url: 'https://nuxt-pwa-2-woad.vercel.app/manifest.json',
-      //   },
-      // ],
     },
     workbox: {
       navigateFallback: '/',
