@@ -28,7 +28,9 @@ const loadItems = async () => {
 
 async function handlePWANavigate() {
   // window.location.href = '#PWA CHILD URL ';
-  await navigateTo('/pqrs/')
+  await navigateTo('https://groot-pwa-app-1.vercel.app/pqrs/' , {
+    external : true
+  })
 }
 
 
